@@ -10,9 +10,18 @@ const Home = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Profile Picture */}
           <ScrollReveal delay={0} className="mb-8">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-gray-200 to-gray-400 dark:from-gray-700 dark:to-gray-900 flex items-center justify-center overflow-hidden">
-              <div className="w-full h-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center text-4xl font-bold text-gray-600 dark:text-gray-300">
-                YK
+            <div className="relative w-32 h-32 mx-auto rounded-full overflow-visible group cursor-pointer profile-card">
+              {/* Glowing yellow corner accents */}
+              <div className="absolute -top-1 -left-1 w-10 h-10 rounded-full bg-yellow-400/0 group-hover:bg-yellow-400/70 blur-2xl transition-all duration-[180ms] ease-out corner-glow-top pointer-events-none"></div>
+              <div className="absolute -bottom-1 -right-1 w-10 h-10 rounded-full bg-yellow-400/0 group-hover:bg-yellow-400/70 blur-2xl transition-all duration-[180ms] ease-out corner-glow-bottom pointer-events-none"></div>
+              
+              {/* Main card container */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-gray-200 dark:border-gray-800 shadow-lg profile-card-inner">
+                <img 
+                  src="/profile.png" 
+                  alt="Rishi Raj" 
+                  className="w-full h-full object-cover object-[center_8%] grayscale group-hover:grayscale-0 transition-all duration-300 profile-image"
+                />
               </div>
             </div>
           </ScrollReveal>
@@ -24,27 +33,28 @@ const Home = () => {
               <span className="text-gray-600 dark:text-gray-400">Available for work!</span>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
-              Currently based in Gurgaon — open to relocate
+              Currently based in Gurugram — open to relocate
             </p>
           </ScrollReveal>
 
           {/* Main Heading */}
           <ScrollReveal delay={0.16}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
-              Hi I'm{' '}
-              <span className="text-pink-600 dark:text-pink-400">Rishi Raj</span> - Frontend
-              Engineer with Full-Stack Expertise.
+              Hi, I'm{' '}
+              <span className="text-pink-600 dark:text-pink-400">Rishi Raj</span>
             </h1>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-gray-700 dark:text-gray-300">
+              Senior Software Engineer specialising in Android Systems & Full-Stack Development
+            </h2>
           </ScrollReveal>
 
           {/* Description */}
           <ScrollReveal delay={0.24}>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-              I build fast, accessible, and SEO-friendly web applications using React.js, Next.js,
-              Tailwind CSS, and shadcn/ui. With 3.5+ years of experience and strong full-stack skills
-              in JavaScript and TypeScript, I am passionate about creating smooth user interfaces,
-              maintaining excellent UI/UX, and writing clean, maintainable code. I craft modern user
-              experiences while also delivering scalable backend integrations when needed.
+              I design and deliver high-performance software across Android system internals, middleware, and scalable full-stack web applications. Over the past four years, I've engineered production-grade solutions for broadcast technology, Android TV platforms, CMS ecosystems, and embedded Android components.
+            </p>
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
+              I enjoy solving complex system-level challenges and building reliable digital products that scale gracefully in real-world environments.
             </p>
           </ScrollReveal>
 

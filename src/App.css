@@ -29,3 +29,91 @@ section {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* Profile Card Hover Effects */
+.profile-card {
+  transition: transform 0.12s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.profile-card:hover {
+  transform: scale(1.06);
+}
+
+.profile-card-inner {
+  transition: filter 0.18s ease-out;
+}
+
+.profile-card:hover .profile-card-inner {
+  filter: brightness(1.08);
+}
+
+.profile-image {
+  transition: filter 0.3s ease-out;
+}
+
+/* Yellow corner glow effects with pulse animation */
+.corner-glow-top,
+.corner-glow-bottom {
+  transition: background-color 0.18s ease-out;
+  z-index: 10;
+}
+
+.profile-card:hover .corner-glow-top,
+.profile-card:hover .corner-glow-bottom {
+  animation: pulse-glow 1s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Soft halo drop-shadow effect */
+.profile-card-inner {
+  position: relative;
+}
+
+.profile-card:hover .profile-card-inner::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.6) 0%, rgba(250, 204, 21, 0) 70%);
+  filter: blur(8px);
+  z-index: -1;
+  animation: pulse-halo 1s ease-in-out infinite;
+}
+
+.profile-card:hover .profile-card-inner::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.6) 0%, rgba(250, 204, 21, 0) 70%);
+  filter: blur(8px);
+  z-index: -1;
+  animation: pulse-halo 1s ease-in-out infinite;
+}
+
+@keyframes pulse-halo {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.15);
+  }
+}

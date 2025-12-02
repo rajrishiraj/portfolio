@@ -29,7 +29,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-black transition-colors duration-300">
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main>
         <section id="home">

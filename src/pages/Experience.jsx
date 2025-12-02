@@ -4,111 +4,93 @@ import ScrollReveal from '../components/ScrollReveal'
 const Experience = () => {
   const experiences = [
     {
-      company: 'Impact Academies',
-      location: 'Gurgaon',
-      role: 'IT Tutor',
-      period: '2024 - Present',
+      company: 'Waveion Technologies',
+      location: 'Gurugram',
+      role: 'Senior Software Engineer',
+      period: 'Jan 2025 – Present',
       description:
-        "I teach Scratch, Java, JavaScript, Python, HTML, CSS, Motion Design, AI, ML, and more. I help students learn these skills and build their own projects. I teach from age 5 to 40+",
+        'At Waveion Technologies, I lead the development of CAASTV CMS, a full-scale content management ecosystem powering an Android TV application for IPTV operations.',
+      contributions: [
+        'Designed and developed the entire CMS from scratch, covering both backend architecture and responsive frontend interfaces.',
+        'Implemented real-time integration with the Android TV app to control channel listings, EPG, metadata, watermarking, fingerprint overlays, and scrolling messages.',
+        'Architected a modular, scalable backend with clean separation of services, ensuring long-term maintainability and expansion.',
+        'Developed the TV Provider database layer to manage channel metadata, inputs, and content mapping seamlessly within Android.',
+        'Integrated ExoPlayer with DRM for secure media playback.',
+        "Built the complete EPG system: XML parsing, metadata processing, synchronization with Android's TIF framework, and scheduled content flow.",
+        'Delivered critical CMS modules including channel, genre, banner, language, and package management with real-time app synchronization.',
+        'Implemented role-based access control, secure authentication (JWT, bcrypt), and comprehensive audit logging.',
+        'Dockerized the entire platform using Docker Compose for smooth deployment and development workflows.',
+      ],
       technologies: [
-        'Scratch',
+        'React.js',
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'Mongoose',
+        'Android TV',
+        'TIF Framework',
+        'ExoPlayer',
+        'DRM',
+        'JWT',
+        'Bcrypt',
+        'Docker',
+        'Docker Compose',
+        'REST API',
+        'XML Parsing',
+        'Real-time Integration',
+      ],
+    },
+    {
+      company: 'Three Meadows Software',
+      location: 'Bengaluru',
+      role: 'Senior Software Engineer',
+      period: 'Sep 2021 – Jan 2025',
+      description:
+        'Worked on digital TV broadcasting solutions, Android middleware integrations, and system-level enhancements across multiple chipsets and markets.',
+      contributions: [
+        {
+          title: 'Digital TV Broadcast Stack (ATSC)',
+          items: [
+            'Implemented test suites for MediaTek and Realtek chipsets aligned with Eurofins Digital TV standards.',
+            'Ported the ATSC broadcast stack onto Android 11 for next-gen TV solutions.',
+            'Collaborated with major platform teams to integrate and adapt middleware for US-based markets.',
+            'Worked closely on audio/video playback pipelines and tuning for Android-based digital TV devices.',
+          ],
+        },
+        {
+          title: 'Telly ATSC 1.0 Solution',
+          items: [
+            'Integrated CBS 4.0 middleware (Java-based) with Android systems to support TV operations on Android boxes.',
+            'Built a custom testing application enabling communication with CBS middleware, supporting PAT/NIT scanning, AV playback, and channel switching.',
+            'Developed an Android application that interacts with C-based Iwedia middleware for fundamental TV features.',
+          ],
+        },
+        {
+          title: 'Google Ref+',
+          items: [
+            'Collaborated on the Google TV Android application built over the Android TV Input Framework.',
+            'Integrated Iwedia middleware APIs with Android TIF to enable multi-audio track support.',
+            'Designed and implemented first-time installation flows, channel editing features, and Zap Banner UI.',
+            'Updated underlying middleware logic to match new app-level requirements and customer specifications.',
+          ],
+        },
+      ],
+      technologies: [
+        'Android',
+        'AOSP',
+        'Android TV',
+        'TIF Framework',
         'Java',
-        'JavaScript',
-        'Python',
-        'HTML',
-        'CSS',
-        'Motion Design',
-        'AI',
-        'ML',
-      ],
-    },
-    {
-      company: 'Dragon Sino Group',
-      location: 'Gurgaon',
-      role: 'Full Stack Developer',
-      period: '2024 - 2025',
-      description:
-        'Worked as a Full Stack developer at Dragon Sino Group, a Chinese company operating in the Gurgaon. Created fully functional MERN Stack Web Applications with responsive behavior, smooth touch UI, and API Integration.',
-      technologies: [
-        'TypeScript',
-        'React.js',
-        'Next.js',
-        'Tailwind CSS',
-        'Node.js',
-        'Express',
-        'API Integration',
-        'MERN Stack',
-        'RESTful API',
-        'PHP',
-        'MySQL',
-      ],
-    },
-    {
-      company: 'Octane Apps',
-      location: 'Remote',
-      role: 'Frontend Developer (React.js)',
-      period: '2023 - 2024',
-      description:
-        'Worked as a Frontend Developer specializing in React.js at Octane Apps. Created fully functional Next.js based frontends with MERN dashboards, focusing on responsive design and smooth user interfaces.',
-      technologies: [
-        'Next.js',
-        'React.js',
-        'SCSS',
-        'CSS',
-        'MUI',
-        'SEO',
-        'Payment Gateway',
-        'API Integration',
-        'RESTful API',
-        'MERN Stack',
-        'Node.js',
-        'MongoDB',
-        'Express',
-        'TypeScript',
-        'Tailwind CSS',
-        'Firebase',
-      ],
-    },
-    {
-      company: 'Anandlok Ayurveda & Panchakarma Hospital',
-      location: 'Nagpur',
-      role: 'Frontend Developer (Full-Stack - Next.js)',
-      period: '2021 - 2023',
-      description:
-        'Worked as a Full Stack Developer Frontend Focused, creating a website for Ayurveda & Panchakarma practitioners using React.js, Next.js, and Material-UI. The platform allows practitioners to share their knowledge and experience with others.',
-      technologies: [
-        'Next.js',
-        'React.js',
-        'CSS',
-        'Material-UI',
-        'SEO',
-        'Node.js',
-        'MongoDB',
-        'Express',
-        'TypeScript',
-        'Tailwind CSS',
-        'Firebase',
-        'API Integration',
-        'MERN Stack',
-        'RESTful API',
-      ],
-    },
-    {
-      company: 'Self-Employed',
-      location: 'Remote',
-      role: 'Freelance Full Stack Developer',
-      period: '2020 - Present',
-      description:
-        'Working as a freelance Full Stack Developer, specializing in MERN/MEVN stack development. Creating responsive web applications, e-commerce platforms, and custom solutions for various clients. Available for hire at $35/hr, may vary depending on the project. And flexible working hours.',
-      technologies: [
-        'React.js',
-        'Next.js',
-        'Vue.js',
-        'Node.js',
-        'MongoDB',
-        'Express',
-        'TypeScript',
-        'Tailwind CSS',
+        'C',
+        'CBS Middleware',
+        'Iwedia Middleware',
+        'ATSC',
+        'MediaTek',
+        'Realtek',
+        'Android 11',
+        'Digital TV',
+        'Broadcast Stack',
+        'Middleware Integration',
       ],
     },
   ]
@@ -125,7 +107,7 @@ const Experience = () => {
           </p>
         </ScrollReveal>
 
-        <div className="space-y-8">
+        <div className="space-y-12">
           {experiences.map((exp, index) => (
             <ScrollReveal key={index} delay={0.16 + index * 0.08}>
               <div className="relative pl-8 border-l-2 border-gray-300 dark:border-gray-700">
@@ -143,22 +125,52 @@ const Experience = () => {
                   </div>
                 </div>
                 <h4 className="text-lg font-semibold mb-2">{exp.role}</h4>
-                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-3">
+                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
                   <Calendar className="w-4 h-4" />
                   {exp.period}
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                   {exp.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {exp.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                
+                {/* Key Contributions */}
+                <div className="mb-6">
+                  <h5 className="text-md font-semibold mb-3 text-gray-800 dark:text-gray-200">Key Contributions</h5>
+                  {Array.isArray(exp.contributions) && exp.contributions[0] && typeof exp.contributions[0] === 'string' ? (
+                    <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400 ml-4">
+                      {exp.contributions.map((contribution, idx) => (
+                        <li key={idx} className="leading-relaxed">{contribution}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <div className="space-y-4">
+                      {exp.contributions.map((contribution, idx) => (
+                        <div key={idx} className="ml-4">
+                          <h6 className="font-semibold text-gray-700 dark:text-gray-300 mb-2">{contribution.title}</h6>
+                          <ul className="list-disc list-inside space-y-1 text-gray-600 dark:text-gray-400 ml-4">
+                            {contribution.items.map((item, itemIdx) => (
+                              <li key={itemIdx} className="leading-relaxed">{item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Technologies */}
+                <div>
+                  <h5 className="text-md font-semibold mb-3 text-gray-800 dark:text-gray-200">Technologies</h5>
+                  <div className="flex flex-wrap gap-2">
+                    {exp.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
