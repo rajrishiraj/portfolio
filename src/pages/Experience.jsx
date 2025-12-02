@@ -96,7 +96,7 @@ const Experience = () => {
   ]
 
   return (
-    <div className="min-h-screen container mx-auto px-4 py-20">
+    <div className="min-h-screen container mx-auto px-4 pt-1 pb-1">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal delay={0}>
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">My Experience</h1>

@@ -88,7 +88,7 @@ const Home = () => {
           {/* Social Links */}
           <ScrollReveal delay={0.4} className="flex items-center justify-center gap-4">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/rishiraj9523/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border-2 border-gray-900 dark:border-gray-100 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
