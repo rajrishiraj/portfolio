@@ -55,13 +55,13 @@ const Contact = () => {
   }
 
   return (
-    <div className="min-h-screen container mx-auto px-4 py-20">
+    <div className="min-h-screen container mx-auto px-4 py-12 md:py-20">
       <div className="max-w-2xl mx-auto">
         <ScrollReveal delay={0}>
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">Get In Touch</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">Get In Touch</h1>
         </ScrollReveal>
         <ScrollReveal delay={0.08}>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-center text-sm md:text-base text-gray-600 dark:text-gray-400 mb-6 md:mb-8 px-4">
             Please contact me directly at{' '}
             <a
               href="mailto:rajrishiraj59@gmail.com"

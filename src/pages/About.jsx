@@ -28,13 +28,13 @@ const About = () => {
   ]
 
   return (
-    <div className="min-h-screen container mx-auto px-4 pt-20 pb-1">
+    <div className="min-h-screen container mx-auto px-4 pt-12 md:pt-20 pb-1">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal delay={0}>
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">About Me</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">About Me</h1>
         </ScrollReveal>
 
-        <div className="space-y-6 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+        <div className="space-y-4 md:space-y-6 text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
           <ScrollReveal delay={0.08}>
             <p>
               I'm a Senior Software Engineer with a background spanning Android system development, broadcast stack integrations, and full-stack web engineering. My work combines low-level system expertise with practical product engineering, allowing me to build everything from embedded Android components to complete CMS ecosystems.
@@ -61,15 +61,15 @@ const About = () => {
         </div>
 
         {/* Skills Section */}
-        <div className="mt-16">
+        <div className="mt-8 md:mt-16">
           <ScrollReveal delay={0.4}>
-            <div className="flex flex-wrap items-center justify-center gap-11">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 lg:gap-11">
               {allTechnologies.map((tech) => (
                 <div key={tech.name}>
                   <img 
                     src={tech.logo} 
                     alt={tech.name} 
-                    className="w-12 h-12 brightness-0 dark:invert" 
+                    className="w-10 h-10 md:w-12 md:h-12 brightness-0 dark:invert" 
                   />
                 </div>
               ))}

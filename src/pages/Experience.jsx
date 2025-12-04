@@ -96,58 +96,58 @@ const Experience = () => {
   ]
 
   return (
-    <div className="min-h-screen container mx-auto px-4 pt-1 pb-1">
+    <div className="min-h-screen container mx-auto px-4 pt-1 pb-8 md:pb-20">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal delay={0}>
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">My Experience</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">My Experience</h1>
         </ScrollReveal>
         <ScrollReveal delay={0.08}>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-12">
+          <p className="text-center text-sm md:text-base text-gray-600 dark:text-gray-400 mb-8 md:mb-12 px-4">
             Professional experience that I have accumulated over several years.
           </p>
         </ScrollReveal>
 
-        <div className="space-y-12">
+        <div className="space-y-8 md:space-y-12">
           {experiences.map((exp, index) => (
             <ScrollReveal key={index} delay={0.16 + index * 0.08}>
-              <div className="relative pl-8 border-l-2 border-gray-300 dark:border-gray-700">
-                <div className="absolute -left-3 top-0 w-6 h-6 bg-gray-900 dark:bg-gray-100 rounded-full border-4 border-white dark:border-gray-900"></div>
-                <div className="flex items-start gap-3 mb-2">
-                  <Building2 className="w-5 h-5 text-gray-600 dark:text-gray-400 mt-1" />
+              <div className="relative pl-6 md:pl-8 border-l-2 border-gray-300 dark:border-gray-700">
+                <div className="absolute -left-2.5 md:-left-3 top-0 w-5 h-5 md:w-6 md:h-6 bg-gray-900 dark:bg-gray-100 rounded-full border-2 md:border-4 border-white dark:border-gray-900"></div>
+                <div className="flex items-start gap-2 md:gap-3 mb-2">
+                  <Building2 className="w-4 h-4 md:w-5 md:h-5 text-gray-600 dark:text-gray-400 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold">{exp.company}</h3>
-                    <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    <h3 className="text-lg md:text-xl font-bold">{exp.company}</h3>
+                    <div className="flex items-center gap-2 md:gap-4 text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">
                       <span className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
+                        <MapPin className="w-3 h-3 md:w-4 md:h-4" />
                         {exp.location}
                       </span>
                     </div>
                   </div>
                 </div>
-                <h4 className="text-lg font-semibold mb-2">{exp.role}</h4>
-                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
-                  <Calendar className="w-4 h-4" />
+                <h4 className="text-base md:text-lg font-semibold mb-2">{exp.role}</h4>
+                <div className="flex items-center gap-2 text-xs md:text-sm text-gray-600 dark:text-gray-400 mb-3 md:mb-4">
+                  <Calendar className="w-3 h-3 md:w-4 md:h-4" />
                   {exp.period}
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 md:mb-6 leading-relaxed">
                   {exp.description}
                 </p>
                 
                 {/* Key Contributions */}
-                <div className="mb-6">
-                  <h5 className="text-md font-semibold mb-3 text-gray-800 dark:text-gray-200">Key Contributions</h5>
+                <div className="mb-4 md:mb-6">
+                  <h5 className="text-sm md:text-base font-semibold mb-2 md:mb-3 text-gray-800 dark:text-gray-200">Key Contributions</h5>
                   {Array.isArray(exp.contributions) && exp.contributions[0] && typeof exp.contributions[0] === 'string' ? (
-                    <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400 ml-4">
+                    <ul className="list-disc list-inside space-y-1.5 md:space-y-2 text-xs md:text-sm text-gray-600 dark:text-gray-400 ml-2 md:ml-4">
                       {exp.contributions.map((contribution, idx) => (
                         <li key={idx} className="leading-relaxed">{contribution}</li>
                       ))}
                     </ul>
                   ) : (
-                    <div className="space-y-4">
+                    <div className="space-y-3 md:space-y-4">
                       {exp.contributions.map((contribution, idx) => (
-                        <div key={idx} className="ml-4">
-                          <h6 className="font-semibold text-gray-700 dark:text-gray-300 mb-2">{contribution.title}</h6>
-                          <ul className="list-disc list-inside space-y-1 text-gray-600 dark:text-gray-400 ml-4">
+                        <div key={idx} className="ml-2 md:ml-4">
+                          <h6 className="text-sm md:text-base font-semibold text-gray-700 dark:text-gray-300 mb-1.5 md:mb-2">{contribution.title}</h6>
+                          <ul className="list-disc list-inside space-y-1 text-xs md:text-sm text-gray-600 dark:text-gray-400 ml-2 md:ml-4">
                             {contribution.items.map((item, itemIdx) => (
                               <li key={itemIdx} className="leading-relaxed">{item}</li>
                             ))}
@@ -160,12 +160,12 @@ const Experience = () => {
 
                 {/* Technologies */}
                 <div>
-                  <h5 className="text-md font-semibold mb-3 text-gray-800 dark:text-gray-200">Technologies</h5>
-                  <div className="flex flex-wrap gap-2">
+                  <h5 className="text-sm md:text-base font-semibold mb-2 md:mb-3 text-gray-800 dark:text-gray-200">Technologies</h5>
+                  <div className="flex flex-wrap gap-1.5 md:gap-2">
                     {exp.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
+                        className="px-2 md:px-3 py-0.5 md:py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs md:text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
                       >
                         {tech}
                       </span>

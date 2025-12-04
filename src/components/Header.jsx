@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Sun, Moon } from 'lucide-react'
+import { Sun, Moon, ChevronDown } from 'lucide-react'
 
 const navLinks = [
   { id: 'home', label: 'Home' },
@@ -12,6 +12,7 @@ const navLinks = [
 
 const Header = ({ darkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState('home')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,11 +49,17 @@ const Header = ({ darkMode, toggleDarkMode }) => {
     }
   }
 
+  const handleMobileNavClick = (e, sectionId) => {
+    handleNavClick(e, sectionId)
+    setMobileMenuOpen(false)
+  }
+
   return (
-    <header className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+    <header className="sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between relative">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.id}
@@ -68,9 +75,25 @@ const Header = ({ darkMode, toggleDarkMode }) => {
               </a>
             ))}
           </div>
+
+          {/* Mobile Menu Button - Centered */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden absolute left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            aria-label="Toggle menu"
+          >
+            Menu
+            <ChevronDown 
+              className={`w-4 h-4 transition-transform duration-200 ${
+                mobileMenuOpen ? 'rotate-180' : ''
+              }`} 
+            />
+          </button>
+
+          {/* Dark Mode Toggle */}
           <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors ml-auto"
             aria-label="Toggle dark mode"
           >
             {darkMode ? (
@@ -80,6 +103,30 @@ const Header = ({ darkMode, toggleDarkMode }) => {
             )}
           </button>
         </div>
+
+        {/* Mobile Navigation Menu - Glass Dropdown */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 mt-2 mx-4">
+            <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-2xl border border-white/20 dark:border-gray-700/30 shadow-2xl overflow-hidden">
+              <div className="flex flex-col p-2">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.id}
+                    href={`#${link.id}`}
+                    onClick={(e) => handleMobileNavClick(e, link.id)}
+                    className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
+                      activeSection === link.id
+                        ? 'bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 shadow-sm'
+                        : 'text-gray-700 dark:text-gray-300 hover:bg-white/30 dark:hover:bg-gray-800/30'
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   )

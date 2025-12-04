@@ -6,11 +6,11 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20">
+      <section className="container mx-auto px-4 py-12 md:py-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Profile Picture */}
-          <ScrollReveal delay={0} className="mb-8">
-            <div className="relative w-32 h-32 mx-auto rounded-full overflow-visible group cursor-pointer profile-card">
+          <ScrollReveal delay={0} className="mb-6 md:mb-8">
+            <div className="relative w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full overflow-visible group cursor-pointer profile-card">
               {/* Glowing yellow corner accents */}
               <div className="absolute -top-1 -left-1 w-10 h-10 rounded-full bg-yellow-400/0 group-hover:bg-yellow-400/70 blur-2xl transition-all duration-[180ms] ease-out corner-glow-top pointer-events-none"></div>
               <div className="absolute -bottom-1 -right-1 w-10 h-10 rounded-full bg-yellow-400/0 group-hover:bg-yellow-400/70 blur-2xl transition-all duration-[180ms] ease-out corner-glow-bottom pointer-events-none"></div>
@@ -59,14 +59,14 @@ const Home = () => {
           </ScrollReveal>
 
           {/* CTA Buttons */}
-          <ScrollReveal delay={0.32} className="flex flex-wrap items-center justify-center gap-4 mb-8">
+          <ScrollReveal delay={0.32} className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 md:gap-4 mb-6 md:mb-8">
             <a
               href="#contact"
               onClick={(e) => {
                 e.preventDefault()
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
               }}
-              className="px-6 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-full font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors flex items-center gap-2"
+              className="w-full sm:w-auto px-5 md:px-6 py-2.5 md:py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-full font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 text-sm md:text-base"
             >
               Get in touch <ArrowRight className="w-4 h-4" />
             </a>
@@ -76,11 +76,11 @@ const Home = () => {
                 e.preventDefault()
                 document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
               }}
-              className="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-900 dark:border-gray-100 text-gray-900 dark:text-gray-100 rounded-full font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center gap-2"
+              className="w-full sm:w-auto px-5 md:px-6 py-2.5 md:py-3 bg-white dark:bg-gray-800 border-2 border-gray-900 dark:border-gray-100 text-gray-900 dark:text-gray-100 rounded-full font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center gap-2 text-sm md:text-base"
             >
               View projects <ExternalLink className="w-4 h-4" />
             </a>
-            <button className="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-900 dark:border-gray-100 text-gray-900 dark:text-gray-100 rounded-full font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center gap-2">
+            <button className="w-full sm:w-auto px-5 md:px-6 py-2.5 md:py-3 bg-white dark:bg-gray-800 border-2 border-gray-900 dark:border-gray-100 text-gray-900 dark:text-gray-100 rounded-full font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center gap-2 text-sm md:text-base">
               Download CV <Download className="w-4 h-4" />
             </button>
           </ScrollReveal>

@@ -45,13 +45,13 @@ const Testimonials = () => {
   }
 
   return (
-    <div className="min-h-screen container mx-auto px-4 py-20">
+    <div className="min-h-screen container mx-auto px-4 py-12 md:py-20">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal delay={0}>
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">Testimonials</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">Testimonials</h1>
         </ScrollReveal>
         <ScrollReveal delay={0.08}>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-12">
+          <p className="text-center text-sm md:text-base text-gray-600 dark:text-gray-400 mb-8 md:mb-12 px-4">
             What clients and colleagues say about my work
           </p>
         </ScrollReveal>
@@ -65,27 +65,27 @@ const Testimonials = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 md:p-12"
+                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 md:p-8 lg:p-12"
               >
                 <div className="flex items-center gap-1 mb-6">
                   {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-lg italic text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                <p className="text-base md:text-lg italic text-gray-600 dark:text-gray-400 mb-6 md:mb-8 leading-relaxed">
                   "{testimonials[currentIndex].text}"
                 </p>
                 <div className="flex flex-col items-center">
                   <img
                     src={testimonials[currentIndex].avatar}
                     alt={testimonials[currentIndex].name}
-                    className="w-20 h-20 rounded-full mb-4"
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-full mb-3 md:mb-4"
                   />
-                  <h3 className="text-xl font-bold">{testimonials[currentIndex].name}</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
+                  <h3 className="text-lg md:text-xl font-bold">{testimonials[currentIndex].name}</h3>
+                  <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
                     {testimonials[currentIndex].role}
                   </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-500">
+                  <p className="text-xs md:text-sm text-gray-500 dark:text-gray-500">
                     {testimonials[currentIndex].location}
                   </p>
                 </div>
@@ -94,17 +94,17 @@ const Testimonials = () => {
 
             <button
               onClick={prevTestimonial}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-4 w-10 h-10 md:w-12 md:h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
             </button>
             <button
               onClick={nextTestimonial}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-4 w-10 h-10 md:w-12 md:h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
             </button>
           </div>
         </ScrollReveal>
