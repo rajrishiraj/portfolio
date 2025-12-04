@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const ScrollReveal = ({ children, delay = 0, className = '' }) => {
-  const [ref, isVisible] = useScrollReveal({ threshold: 0.7, triggerOnce: true })
+  const [ref, isVisible] = useScrollReveal({ threshold: 0.1, rootMargin: '0px 0px -50px 0px', triggerOnce: true })
 
   return (
     <motion.div
