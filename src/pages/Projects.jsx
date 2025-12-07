@@ -97,11 +97,11 @@ const Projects = () => {
           {projects.map((project, index) => (
             <ScrollReveal key={index} delay={0.16 + index * 0.08}>
               <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <div className="relative h-64 md:h-72 bg-gray-50 dark:bg-gray-900 overflow-hidden">
+                <div className="relative h-80 sm:h-96 md:h-72 lg:h-80 bg-gray-50 dark:bg-gray-900 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-contain md:object-cover md:object-top"
                   />
                 </div>
                 <div className="p-4 md:p-6">
