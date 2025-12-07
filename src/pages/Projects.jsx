@@ -4,45 +4,42 @@ import ScrollReveal from '../components/ScrollReveal'
 const Projects = () => {
   const projects = [
     {
-      title: 'Calm Llama - AI Chatbot',
+      title: 'Caastv – Unified Media Management Platform',
       description:
-        'A modern web platform that enables users to discover and book premium wellness experiences such as saunas, yoga, massages, and float tanks. Features include real-time availability, secure payments, and instant booking confirmations. Worked as a Full Stack Freelance developer @ ToraTec AI, Dublin, Ireland.',
+        'A custom content management system designed to power both web and Android clients with all core logic handled securely on the server. It supports dynamic content workflows, user and role management, media operations, analytics segregation, and streamlined API communication for real-time updates across platforms. The system is built for scalability, clean deployment across multiple environments, and smooth integration with external services.',
       technologies: [
-        'TypeScript',
-        'Stripe Payment Gateway',
         'React.js',
         'Next.js',
         'Tailwind CSS',
-        'Shadcn UI',
         'Node.js',
         'Express',
-        'UI/UX Developer',
-        'Supabase',
-        'AI',
-        'n8n',
-        'Google Maps API',
+        'MongoDB',
+        'Payment Gateway',
+        'WS',
+        'Redis',
+        'Docker',
+        'Nginx',
+        'App Integration',
       ],
-      image: 'https://via.placeholder.com/600x400/10b981/ffffff?text=Calm+Llama',
+      image: '/caastv-dashboard.png',
       preview: '#',
     },
     {
-      title: 'Mini Otio - AI Research Assistant',
+      title: ' CaaSGuard – Server Monitoring & Ops Panel',
       description:
-        'A modern AI-powered research assistant that combines real-time web search with intelligent response generation. Users can ask research questions and receive comprehensive, streamed responses with multiple formatting options (step-by-step, bullet points, ELI5). Features include bookmark management, conversation export, and a sleek chat interface with real-time streaming capabilities.',
+        'CaaSGuard is a centralized admin panel I built for real-time monitoring and management of Linux servers, Docker containers, and Nginx. It provides a clean dashboard to track system health with live and historical insights, manage containers, and quickly diagnose traffic issues. The platform also offers a secure browser-based terminal for remote access without exposing raw SSH. With configurable settings and flexible controls, it fits smoothly into different production env.',
       technologies: [
-        'AI Agent',
-        'Next.js 15',
-        'TypeScript',
-        'Shadcn UI',
-        'React.js',
-        'Tailwind CSS',
-        'Zustand',
-        'Zod',
-        'OpenRouter API',
-        'Exa.ai',
-        'AI SDK',
+        'React',
+        'Node.js',
+        'Express',
+        'MongoDB',
+        'WebSocket',
+        'SSH integration',
+        'Docker API',
+        'Nginx controls',
+        'System utilities',
       ],
-      image: 'https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Mini+Otio',
+      image: '/caasguard-dashboard.png',
       preview: '#',
     },
     {
@@ -100,11 +97,11 @@ const Projects = () => {
           {projects.map((project, index) => (
             <ScrollReveal key={index} delay={0.16 + index * 0.08}>
               <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <div className="relative h-48 bg-gradient-to-br from-gray-200 to-gray-400 dark:from-gray-700 dark:to-gray-900">
+                <div className="relative h-64 md:h-72 bg-gray-50 dark:bg-gray-900 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div className="p-4 md:p-6">

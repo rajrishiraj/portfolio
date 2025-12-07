@@ -9,30 +9,30 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Lucca Allen',
-      role: 'Co-Founder @ ToraTech AI',
-      location: 'Dublin, Ireland',
+      name: 'Parmanand Chaturvedi',
+      role: 'Senior Staff Engineer @ Three Meadows Software',
+      location: 'Bengaluru, India ',
       rating: 5,
-      text: "I have worked with Yash, throughout two separate projects during which he was part of the ToraTech AI team. Yash has always shown tremendous initiative to get work done and work around problems. I was impressed with his back end skills, aswell as having a great eye for a UX and UI. I would recommend Yash to any company looking for efficient development.",
-      avatar: 'https://via.placeholder.com/80/3b82f6/ffffff?text=LA',
+      text: "Working with Rishi every day has been steady and productive. He's reliable, solves problems with clarity, and keeps projects moving smoothly.",
+      avatar: '/testimonial-3.png',
     },
     {
       id: 2,
-      name: 'John Doe',
-      role: 'CEO @ Tech Startup',
-      location: 'London, UK',
+      name: 'Chirag',
+      role: 'Founder @ TheeLittLab',
+      location: 'Gurugram, India',
       rating: 5,
-      text: 'Yash delivered an exceptional project for us. His attention to detail and ability to understand our requirements was outstanding. The final product exceeded our expectations.',
+      text: 'I appreciated how Rishi handled my project. He was patient, quick with updates, and the final result turned out better than I expected.',
       avatar: 'https://via.placeholder.com/80/10b981/ffffff?text=JD',
     },
     {
       id: 3,
-      name: 'Jane Smith',
-      role: 'Product Manager',
-      location: 'Manchester, UK',
+      name: 'Lucca Allen',
+      role: 'Co-Founder @ ToraTech AI',
+      location: 'Dublin, Ireland',
       rating: 5,
-      text: 'Working with Yash was a pleasure. He is professional, responsive, and truly understands modern web development. Highly recommended!',
-      avatar: 'https://via.placeholder.com/80/8b5cf6/ffffff?text=JS',
+      text: "Rishi made the whole process simple. He understood what I needed, suggested practical improvements, and delivered exactly what he promised.",
+      avatar: 'https://via.placeholder.com/80/3b82f6/ffffff?text=LA',
     },
   ]
 
@@ -52,7 +52,7 @@ const Testimonials = () => {
         </ScrollReveal>
         <ScrollReveal delay={0.08}>
           <p className="text-center text-sm md:text-base text-gray-600 dark:text-gray-400 mb-8 md:mb-12 px-4">
-            What clients and colleagues say about my work
+            What my clients and colleagues say about the work I deliver
           </p>
         </ScrollReveal>
 
