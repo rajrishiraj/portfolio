@@ -23,16 +23,16 @@ const Testimonials = () => {
       location: 'Gurugram, India',
       rating: 5,
       text: 'I appreciated how Rishi handled my project. He was patient, quick with updates, and the final result turned out better than I expected.',
-      avatar: 'https://via.placeholder.com/80/10b981/ffffff?text=JD',
+      avatar: '/chiraag.jpg',
     },
     {
       id: 3,
-      name: 'Lucca Allen',
-      role: 'Co-Founder @ ToraTech AI',
-      location: 'Dublin, Ireland',
+      name: 'Vareesh Ahmed',
+      role: 'Founder @ prudentbit',
+      location: 'New Delhi, India',
       rating: 5,
       text: "Rishi made the whole process simple. He understood what I needed, suggested practical improvements, and delivered exactly what he promised.",
-      avatar: 'https://via.placeholder.com/80/3b82f6/ffffff?text=LA',
+      avatar: '/vareesh.jpg',
     },
   ]
 
