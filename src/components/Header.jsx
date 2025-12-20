@@ -56,7 +56,9 @@ const Header = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <header className="sticky top-0 z-50">
-      <nav className="container mx-auto px-4 py-4">
+      {/* Glass effect background for header */}
+      <div className="absolute inset-0 bg-white/70 dark:bg-black/70 backdrop-blur-xl border-b border-white/20 dark:border-gray-800/30"></div>
+      <nav className="container mx-auto px-4 py-4 relative z-10">
         <div className="flex items-center justify-between relative">
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-2">
@@ -65,10 +67,10 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={(e) => handleNavClick(e, link.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 backdrop-blur-xl border ${
                   activeSection === link.id
-                    ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'
-                    : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    ? 'bg-white/40 dark:bg-gray-800/40 text-gray-900 dark:text-gray-100 border-white/30 dark:border-gray-700/30 shadow-lg'
+                    : 'bg-white/20 dark:bg-gray-900/20 text-gray-700 dark:text-gray-300 border-white/20 dark:border-gray-800/20 hover:bg-white/30 dark:hover:bg-gray-800/30'
                 }`}
               >
                 {link.label}
@@ -79,7 +81,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
           {/* Mobile Menu Button - Centered */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden absolute left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            className="md:hidden absolute left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full backdrop-blur-xl bg-white/30 dark:bg-gray-900/30 border border-white/30 dark:border-gray-700/30 hover:bg-white/40 dark:hover:bg-gray-800/40 transition-all duration-200 flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 shadow-lg"
             aria-label="Toggle menu"
           >
             Menu
@@ -93,7 +95,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
           {/* Dark Mode Toggle */}
           <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors ml-auto"
+            className="p-2 rounded-full backdrop-blur-xl bg-white/20 dark:bg-gray-900/20 border border-white/20 dark:border-gray-800/20 hover:bg-white/30 dark:hover:bg-gray-800/30 transition-all duration-200 ml-auto shadow-lg"
             aria-label="Toggle dark mode"
           >
             {darkMode ? (
@@ -106,18 +108,18 @@ const Header = ({ darkMode, toggleDarkMode }) => {
 
         {/* Mobile Navigation Menu - Glass Dropdown */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 mt-2 mx-4">
-            <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-2xl border border-white/20 dark:border-gray-700/30 shadow-2xl overflow-hidden">
+          <div className="md:hidden absolute top-full left-0 right-0 mt-2 mx-4 z-20">
+            <div className="bg-white/40 dark:bg-gray-900/40 backdrop-blur-xl rounded-2xl border border-white/30 dark:border-gray-700/30 shadow-2xl overflow-hidden">
               <div className="flex flex-col p-2">
                 {navLinks.map((link) => (
                   <a
                     key={link.id}
                     href={`#${link.id}`}
                     onClick={(e) => handleMobileNavClick(e, link.id)}
-                    className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
+                    className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 backdrop-blur-sm ${
                       activeSection === link.id
-                        ? 'bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 shadow-sm'
-                        : 'text-gray-700 dark:text-gray-300 hover:bg-white/30 dark:hover:bg-gray-800/30'
+                        ? 'bg-white/40 dark:bg-gray-800/40 text-gray-900 dark:text-gray-100 shadow-sm border border-white/20 dark:border-gray-700/20'
+                        : 'text-gray-700 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-800/20'
                     }`}
                   >
                     {link.label}
